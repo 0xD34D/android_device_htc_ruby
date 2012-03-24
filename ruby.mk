@@ -227,3 +227,4 @@ $(call inherit-product-if-exists, vendor/htc/ruby/ruby-vendor.mk)
 PRODUCT_NAME := full_ruby
 PRODUCT_DEVICE := ruby
 PRODUCT_MODEL := Amaze 4g
+PRODUCT_BRAND := HTC
