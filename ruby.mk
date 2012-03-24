@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2011 Xboarder56
+# Copyright (C) 2012 Sportsstar89
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -141,11 +141,11 @@ PRODUCT_COPY_FILES += \
     device/htc/ruby/prebuilt/system/lib/libcommondefs.so:system/lib/libcommondefs.so \
     device/htc/ruby/prebuilt/system/lib/hw/sensors.ruby.so:/system/lib/hw/sensors.ruby.so
 
-## Using prebuilt libril.so right now
-#PRODUCT_COPY_FILES += \
-#    device/htc/ruby/prebuilt/ril/libril.so:system/lib/libril.so \
-#    device/htc/ruby/prebuilt/ril/libreference-ril.so:/system/lib/libreference-ril.so \
-#    device/htc/ruby/prebuilt/ril/rild:/system/bin/rild
+# Ril
+PRODUCT_COPY_FILES += \
+    device/htc/ruby/prebuilt/ril/libril.so:system/lib/libril.so \
+    device/htc/ruby/prebuilt/ril/libreference-ril.so:/system/lib/libreference-ril.so \
+    device/htc/ruby/prebuilt/ril/rild:/system/bin/rild \
 
 # Add touchscreen config file
 PRODUCT_COPY_FILES += \
@@ -163,13 +163,7 @@ PRODUCT_COPY_FILES += \
     device/htc/ruby/prebuilt/system/usr/keylayout/ruby-keypad.kl:system/usr/keylayout/ruby-keypad.kl \
     device/htc/ruby/prebuilt/system/usr/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl
 
-# This is in vendor for now
 ## Wifi Module
-#PRODUCT_COPY_FILES += \
-#    device/htc/ruby/prebuilt/system/lib/modules/kineto_gan.ko:system/lib/modules/kineto_gan.ko \
-#    device/htc/ruby/prebuilt/system/lib/modules/tiwlan_drv.ko:system/lib/modules/tiwlan_drv.ko \
-#    device/htc/ruby/prebuilt/system/lib/modules/tiap_drv.ko:system/lib/modules/tiap_drv.ko
-
 PRODUCT_COPY_FILES += \
     device/htc/ruby/prebuilt/system/etc/vold.fstab:system/etc/vold.fstab \
     device/htc/ruby/prebuilt/system/etc/init.post_boot.sh:system/etc/init.post_boot.sh
