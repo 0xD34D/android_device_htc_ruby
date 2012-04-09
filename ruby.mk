@@ -206,7 +206,7 @@ $(call inherit-product, device/htc/ruby/media_a1026.mk)
 $(call inherit-product, device/htc/ruby/media_htcaudio.mk)
 
 # stuff common to all HTC phones
-$(call inherit-product, device/htc/common/common.mk)
+#$(call inherit-product, device/htc/common/common.mk)
 
 # common msm8660 configs
 $(call inherit-product, device/htc/msm8660-common/msm8660.mk)
