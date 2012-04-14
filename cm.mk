@@ -1,3 +1,11 @@
+# Specify phone tech before including full_phone
+$(call inherit-product, vendor/cm/config/gsm.mk)
+
+# Release name
+PRODUCT_RELEASE_NAME := ruby
+
+TARGET_BOOTANIMATION_NAME := vertical-540x960
+
 # Inherit AOSP device configuration for ruby.
 $(call inherit-product, device/htc/ruby/full_ruby.mk)
 
@@ -18,8 +26,6 @@ PRODUCT_PACKAGES += \
     Camera \
     Stk
 
-# Copy compatible bootanimation
-PRODUCT_COPY_FILES +=  \
-    vendor/cm/prebuilt/common/bootanimation/vertical-540x960.zip:system/media/bootanimation.zip
+
 
 

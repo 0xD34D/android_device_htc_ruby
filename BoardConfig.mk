@@ -1,49 +1,42 @@
 # inherit from the proprietary version
 -include vendor/htc/ruby/BoardConfigVendor.mk
 
-# inherit from common msm8660
--include device/htc/msm8660-common/BoardConfigCommon.mk
-
 USE_CAMERA_STUB := true
 
-#TARGET_NO_BOOTLOADER := true
+TARGET_NO_BOOTLOADER := true
 
-#TARGET_BOARD_PLATFORM := msm8660
-#TARGET_BOARD_PLATFORM_GPU := qcom-adreno200
+TARGET_BOARD_PLATFORM := msm8660
+TARGET_BOARD_PLATFORM_GPU := qcom-adreno200
 
-#TARGET_CPU_ABI := armeabi-v7a
-#TARGET_CPU_ABI2 := armeabi
-#TARGET_ARCH_VARIANT := armv7-a-neon
-#TARGET_ARCH_VARIANT_CPU := cortex-a8
-#TARGET_ARCH_VARIANT_FPU := neon
-#TARGET_CPU_SMP := true
-#ARCH_ARM_HAVE_TLS_REGISTER := true
-#ARCH_ARM_HAVE_VFP := true
+TARGET_CPU_ABI := armeabi-v7a
+TARGET_CPU_ABI2 := armeabi
+TARGET_ARCH_VARIANT := armv7-a-neon
+TARGET_ARCH_VARIANT_CPU := cortex-a8
+TARGET_ARCH_VARIANT_FPU := neon
+TARGET_CPU_SMP := true
+ARCH_ARM_HAVE_TLS_REGISTER := true
+ARCH_ARM_HAVE_VFP := true
 
-#TARGET_USE_SCORPION_BIONIC_OPTIMIZATION := true
-#TARGET_USE_SCORPION_PLD_SET := true
-#TARGET_SCORPION_BIONIC_PLDOFFS := 6
-#TARGET_SCORPION_BIONIC_PLDSIZE := 128
+TARGET_USE_SCORPION_BIONIC_OPTIMIZATION := true
+TARGET_USE_SCORPION_PLD_SET := true
+TARGET_SCORPION_BIONIC_PLDOFFS := 6
+TARGET_SCORPION_BIONIC_PLDSIZE := 128
 
 TARGET_BOOTLOADER_BOARD_NAME := ruby
 TARGET_NO_RADIOIMAGE := true
 TARGET_HAVE_TSLIB := false
 
-#TARGET_SPECIFIC_HEADER_PATH := device/htc/ruby/include
+TARGET_SPECIFIC_HEADER_PATH := device/htc/ruby/include
 
 # Wifi related defines
-#BOARD_WPA_SUPPLICANT_DRIVER := WEXT
-#WPA_SUPPLICANT_VERSION := VER_0_6_X
-#BOARD_WLAN_DEVICE := 1283
-#WIFI_DRIVER_MODULE_PATH := "/system/lib/modules/tiwlan_drv.ko"
-#WIFI_DRIVER_FW_STA_PATH := "/system/etc/firmware/firmware.bin"
-#WIFI_DRIVER_FW_AP_PATH := "/system/etc/wifi/firmware_ap.bin"
-#WIFI_DRIVER_MODULE_NAME := "1283"
+BOARD_WPA_SUPPLICANT_DRIVER := WEXT
+WPA_SUPPLICANT_VERSION := VER_0_6_X
+BOARD_WLAN_DEVICE := 1283
+WIFI_DRIVER_MODULE_PATH := "/system/lib/modules/tiwlan_drv.ko"
+WIFI_DRIVER_FW_STA_PATH := "/system/etc/firmware/firmware.bin"
+WIFI_DRIVER_FW_AP_PATH := "/system/etc/wifi/firmware_ap.bin"
+WIFI_DRIVER_MODULE_NAME := "1283"
 
-# Audio
-BOARD_USES_GENERIC_AUDIO := false
-# prevent breakage from QCOM_HARDWARE in system/audio.h
-COMMON_GLOBAL_CFLAGS += -DLEGACY_AUDIO_COMPAT
 
 # Bluetooth
 #BOARD_HAVE_BLUETOOTH := true
@@ -82,6 +75,7 @@ TARGET_FORCE_CPU_UPLOAD := true
 
 BOARD_USE_NEW_LIBRIL_HTC    := true
 #TARGET_PROVIDES_LIBRIL      := device/htc/ruby/prebuilt/ril/libril.so
+BOARD_PROVIDES_LIBRIL       := vendor/htc/ruby/proprietary/libril.so
 
 BOARD_KERNEL_CMDLINE := no_console_suspend=1 androidboot.hardware=ruby
 BOARD_KERNEL_BASE := 0x48000000
